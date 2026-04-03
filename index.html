@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial;
+    background: #f2f2f2;
+}
+
+/* HEADER */
+header {
+    background: #0f0f0f;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+/* SECCIONES */
+.section {
+    text-align: center;
+    font-size: 18px;
+    margin: 30px 0 10px;
+    letter-spacing: 1px;
+}
+
+/* GRID */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    padding: 0 20px 40px;
+}
+
+/* TARJETAS */
+.card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* CARRUSEL */
+.slider {
+    position: relative;
+}
+
+.slider img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    display: none;
+}
+
+.slider img.active {
+    display: block;
+}
+
+.btn-slider {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* INFO */
+.info {
+    padding: 15px;
+}
+
+.title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.price {
+    font-size: 17px;
+    margin: 6px 0;
+}
+
+.details {
+    font-size: 13px;
+    color: #555;
+}
+
+.btn {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px;
+    background: #0f0f0f;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+/* ===== ESTILO DORADO ===== */
+
+.logo {
+    width: 90px;
+    display: Center;
+    margin: 0 auto 10px;
+}
+
+header .titulo {
+    color: gold;
+}
+
+/* Línea dorada en secciones */
+.section::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: gold;
+    margin: 8px auto 0;
+}
+
+/* Precio dorado */
+.price {
+    color: #c9a646;
+    font-weight: 600;
+}
+
+/* Botón elegante */
+.btn {
+    border: 1px solid gold;
+}
+
+/* Hover botón */
+.btn:hover {
+    background: gold;
+    color: black;
+}
+.logo {
+    width: 80px !important;
+    height: 80px !important;
+    object-fit: cover;
+    border-radius: 50% !important;
+    border: 2px solid gold;
+    display: block;
+    margin: 0 auto 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+   <img src="logo.PNG" class="logo">
+    <div class="titulo">CATÁLOGO DE ROPA</div>
+</header>
+<!-- PLAYERAS NORMALES -->
+<div class="section">PLAYERAS</div>
+<div class="container">
+
+<!-- 6 MODELOS -->
+<div class="card"><div class="slider">
+<img src="p1_11.PNG" class="active"><img src="p1_2.PNG"><img src="p1_3.PNG">
+<button class="btn-slider prev" onclick="moveSlide(this,-1)">‹</button>
+<button class="btn-slider next" onclick="moveSlide(this,1)">›</button></div>
+<div class="info"><div class="title">Playera Modelo 1</div><div class="price">$420</div><div class="details">S, M, L, XL</div>
+<a href="https://wa.me/5219381264237?text=Quiero%20playera%201" class="btn">Comprar</a></div></div>
+
+<div class="card"><div class="slider">
+<img src="p2_1.PNG" class="active"><img src="p2_2.PNG"><img src="p2_3.PNG">
+<button class="btn-slider prev" onclick="moveSlide(this,-1)">‹</button>
+<button class="btn-slider next" onclick="moveSlide(this,1)">›</button></div>
+<div class="info"><div class="title">Playera Modelo 2</div><div class="price">$420</div><div class="details">S, M, L, XL</div>
+<a href="https://wa.me/5219381264237?text=Quiero%20playera%202" class="btn">Comprar</a></div></div>
+
+<div class="card"><div class="slider">
+<img src="p3_1.PNG" class="active"><img src="p3_2.PNG"><img src="p3_3.PNG">
+<button class="btn-slider prev" onclick="moveSlide(this,-1)">‹</button>
+<button class="btn-slider next" onclick="moveSlide(this,1)">›</button></div>
+<div class="info"><div class="title">Playera Modelo 3</div><div class="price">$420</div><div class="details">S, M, L, XL</div>
+<a href="https://wa.me/5219381264237?text=Quiero%20playera%203" class="btn">Comprar</a></div></div>
+
+<div class="card"><div class="slider">
+<img src="p4_1.PNG" class="active"><img src="p4_2.PNG"><img src="p4_3.PNG">
+<button class="btn-slider prev" onclick="moveSlide(this,-1)">‹</button>
+<button class="btn-slider next" onclick="moveSlide(this,1)">›</button></div>
+<div class="info"><div class="title">Playera Modelo 4</div><div class="price">$420</div><div class="details">S, M, L, XL</div>
+<a href="https://wa.me/5219381264237?text=Quiero%20playera%204" class="btn">Comprar</a></div></div>
+
+<div class="card"><div class="slider">
+<img src="p5_1.PNG" class="active"><img src="p5_2.PNG"><img src="p5_3.PNG">
+<button class="btn-slider prev" onclick="moveSlide(this,-1)">‹</button>
+<button class="btn-slider next" onclick="moveSlide(this,1)">›</button></div>
+<div class="info"><div class="title">Playera Modelo 5</div><div class="price">$420</div><div class="details">S, M, L, XL</div>
+<a href="https://wa.me/5219381264237?text=Quiero%20playera%205" class="btn">Comprar</a></div></div>
+
+<div class="card"><div class="slider">
+<img src="p6_1.PNG" class="active"><img src="p6_2.PNG"><img src="p6_3.PNG">
+<button class="btn-slider prev" onclick="moveSlide(this,-1)">‹</button>
+<button class="btn-slider next" onclick="moveSlide(this,1)">›</button></div>
+<div class="info"><div class="title">Playera Modelo 6</div><div class="price">$420</div><div class="details">S, M, L, XL</div>
+<a href="https://wa.me/5219381264237?text=Quiero%20playera%206" class="btn">Comprar</a></div></div>
+
+</div>
+
+<!-- PEDRERÍA -->
+<div class="section">PLAYERAS PEDRERIA</div>
+<div class="container">
+
+<div class="card"><div class="slider">
+<img src="pd1_1.PNG" class="active"><img src="pd1_2.PNG">
+<button class="btn-slider prev" onclick="moveSlide(this,-1)">‹</button>
+<button class="btn-slider next" onclick="moveSlide(this,1)">›</button></div>
+<div class="info"><div class="title">Modelo Premium 1</div><div class="price">$420</div><div class="details">S, M, L, XL</div>
+<a href="https://wa.me/5219381264237?text=Quiero%20premium%201" class="btn">Comprar</a></div></div>
+
+<div class="card"><div class="slider">
+<img src="pd2_1.PNG" class="active"><img src="pd2_2.PNG">
+<button class="btn-slider prev" onclick="moveSlide(this,-1)">‹</button>
+<button class="btn-slider next" onclick="moveSlide(this,1)">›</button></div>
+<div class="info"><div class="title">Modelo Premium 1</div><div class="price">$420</div><div class="details">S, M, L, XL</div>
+<a href="https://wa.me/5219381264237?text=Quiero%20premium%201" class="btn">Comprar</a></div></div>
+
+
+</div>
+
+<!-- SHORTS -->
+<div class="section">SHORTS</div>
+<div class="container">
+
+<div class="card"><div class="slider">
+<img src="s1_1.PNG" class="active"><img src="s1_2.PNG"><img src="s1_3.PNG"><img src="s1_4.PNG">
+<button class="btn-slider prev" onclick="moveSlide(this,-1)">‹</button>
+<button class="btn-slider next" onclick="moveSlide(this,1)">›</button></div>
+<div class="info"><div class="title">Short Modelo 1</div><div class="price">$480</div><div class="details">S, M, L, XL</div>
+<a href="https://wa.me/5219381264237?text=Quiero%20short%201" class="btn">Comprar</a></div></div>
+
+<div class="card"><div class="slider">
+<img src="s2_1.PNG" class="active"><img src="s2_2.PNG"><img src="s2_3.PNG"><img src="s2_4.PNG"><img src="s2_5.PNG">
+<button class="btn-slider prev" onclick="moveSlide(this,-1)">‹</button>
+<button class="btn-slider next" onclick="moveSlide(this,1)">›</button></div>
+<div class="info"><div class="title">Short Modelo 2</div><div class="price">$480</div><div class="details">S, M, L, XL</div>
+<a href="https://wa.me/5219381264237?text=Quiero%20short%202" class="btn">Comprar</a></div></div>
+
+<div class="card"><div class="slider">
+<img src="s3_1.PNG" class="active"><img src="s3_2.PNG"><img src="s3_3.PNG"><img src="s3_4.PNG">
+<button class="btn-slider prev" onclick="moveSlide(this,-1)">‹</button>
+<button class="btn-slider next" onclick="moveSlide(this,1)">›</button></div>
+<div class="info"><div class="title">Short Modelo 3</div><div class="price">$480</div><div class="details">S, M, L, XL</div>
+<a href="https://wa.me/5219381264237?text=Quiero%20short%203" class="btn">Comprar</a></div></div>
+
+<div class="card"><div class="slider">
+<img src="s4_1.PNG" class="active"><img src="s4_2.PNG"><img src="s4_3.PNG"><img src="s4_4.PNG">
+<button class="btn-slider prev" onclick="moveSlide(this,-1)">‹</button>
+<button class="btn-slider next" onclick="moveSlide(this,1)">›</button></div>
+<div class="info"><div class="title">Short Modelo 4</div><div class="price">$480</div><div class="details">S, M, L, XL</div>
+<a href="https://wa.me/5219381264237?text=Quiero%20short%204" class="btn">Comprar</a></div></div>
+
+<div class="card"><div class="slider">
+<img src="s5_1.PNG" class="active"><img src="s5_2.PNG"><img src="s5_3.PNG"><img src="s5_4.PNG"><img src="s5_5.PNG">
+<button class="btn-slider prev" onclick="moveSlide(this,-1)">‹</button>
+<button class="btn-slider next" onclick="moveSlide(this,1)">›</button></div>
+<div class="info"><div class="title">Short Modelo 5</div><div class="price">$480</div><div class="details">S, M, L, XL</div>
+<a href="https://wa.me/5219381264237?text=Quiero%20short%205" class="btn">Comprar</a></div></div>
+
+</div>
+
+<script>
+function moveSlide(btn, dir) {
+    const slider = btn.parentElement;
+    const images = slider.querySelectorAll("img");
+    let index = [...images].findIndex(img => img.classList.contains("active"));
+    images[index].classList.remove("active");
+    index = (index + dir + images.length) % images.length;
+    images[index].classList.add("active");
+}
+</script>
+
+</body>
+</html>
